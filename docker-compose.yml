@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  jekyll:
+    build: .
+    image: slowhand/jekyll
+    container_name: "jekyll"
+    command: bash -c "bundle install --system && jekyll serve"
+    tty: true
+    stdin_open: true
+    ports:
+      - '4000:4000'
+    volumes:
+      - .:/usr/src/app
+      - bundle_data:/usr/local/bundle
+    working_dir: /usr/src/app
+
+volumes:
+  bundle_data:
