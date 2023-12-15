@@ -1,0 +1,10 @@
+{
+	"name": "Jekyll",
+	"dockerComposeFile": ["./docker-compose.yml"],
+	"service": "jekyll",
+	"workspaceFolder": "/usr/src/app",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/ripgrep:1": {}
+	},
+	"shutdownAction": "none"
+}
