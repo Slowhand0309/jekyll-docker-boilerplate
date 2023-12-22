@@ -6,5 +6,6 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/ripgrep:1": {}
 	},
-	"shutdownAction": "none"
+  "postAttachCommand": ".devcontainer/postAttach.sh",
+  "remoteUser": "vscode"
 }
